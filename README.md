@@ -190,8 +190,10 @@ $> webots &
 ```
 ![Webots](resources/crazyflie-webots.png)
 
-In the world model, `simulator_files/webots/worlds/crazyflie_world_with_wind.wbt`, wind is simulated from a simple wind controller that applies random force to the drone.  
-See `<your_ros2_workspace>/src/Crazyflie2.1/simulator_files/webots/controllers/wind_controller/`
+In the world model, `simulator_files/webots/worlds/crazyflie_world_with_wind.wbt`, wind is simulated from a simple wind controller that applies random force to the drone. See `<your_ros2_workspace>/src/Crazyflie2.1/simulator_files/webots/controllers/wind_controller/`
+
+[![](https://youtube.com/shorts/cPc2HwUlNXI/0.jpg)](https://youtube.com/shorts/cPc2HwUlNXI)
+
 
 [humble]: https://docs.ros.org/en/humble/index.html
 [humble-badge]: https://img.shields.io/badge/-HUMBLE-orange?style=flat-square&logo=ros
