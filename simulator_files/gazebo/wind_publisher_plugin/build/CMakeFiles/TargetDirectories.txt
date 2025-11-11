@@ -1,0 +1,7 @@
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/gz-sim8-wind-publisher-system.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/edit_cache.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/rebuild_cache.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/list_install_components.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/install.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/install/local.dir
+/media/grocher/Data/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/wind_publisher_plugin/build/CMakeFiles/install/strip.dir

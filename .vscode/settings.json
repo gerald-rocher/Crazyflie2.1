@@ -1,0 +1,33 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/media/grocher/Data/ros2_ws/install/ros_gz_crazyflie_control/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_sim/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_ros2_multiranger_wall_following/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_ros2_multiranger_simple_mapper/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_examples/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_py/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_interfaces/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_fsm/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_closest_point/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_braitenberg/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/media/grocher/Data/ros2_ws/install/ros_gz_crazyflie_control/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_sim/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_ros2_multiranger_wall_following/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_ros2_multiranger_simple_mapper/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_examples/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_py/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/crazyflie_interfaces/local/lib/python3.10/dist-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_fsm/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_closest_point/lib/python3.10/site-packages",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_braitenberg/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "files.associations": {
+        "chrono": "cpp"
+    }
+}

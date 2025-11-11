@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypelocation="http://download.ros.org/schema/package_format3.xsd"?>
+<package format="3">
+  <name>wind_publisher_system_plugin</name>
+  <version>1.0.0</version>
+  <description>Wind publisher plugin</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend>pkg-config</buildtool_depend>
+
+  <depend>gz-sim8</depend>
+  <depend>gz-transport13</depend>
+  <depend>gz-msgs10</depend>
+  <depend>gz-math7</depend>
+  <depend>gz-plugin2</depend>
+
+  <export>
+    <build_type>cmake</build_type>
+    <gz_plugin>wind_publisher_system</gz_plugin>
+  </export>
+</package>

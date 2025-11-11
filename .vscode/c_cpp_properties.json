@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/media/grocher/Data/ros2_ws/install/crazyflie_interfaces/include/**",
+        "/media/grocher/Data/ros2_ws/install/turtlebot3_gazebo/include/**",
+        "/media/grocher/Data/ros2_ws/install/ab2_gazebo/include/**",
+        "/opt/ros/humble/include/**",
+        "/media/grocher/Data/ros2_ws/src/Alphabot2/ab2_gazebo/include/**",
+        "/media/grocher/Data/ros2_ws/src/Turtlebot3/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

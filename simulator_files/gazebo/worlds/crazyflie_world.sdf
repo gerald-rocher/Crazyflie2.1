@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.8">
+  <world name="empty">
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+
+    <!--
+    <wind>
+      <linear_velocity>0.1 0 0</linear_velocity>
+    </wind>
+    -->
+
+    <plugin
+      filename="gz-sim-wind-effects-system"
+      name="gz::sim::systems::WindEffects">
+      <force_approximation_scaling_factor>1</force_approximation_scaling_factor>
+      <horizontal>
+        <magnitude>
+          <mean>5.0</mean>
+          <time_for_rise>5</time_for_rise>
+          <sin>
+            <amplitude_percent>0.1</amplitude_percent>
+            <period>60</period>
+          </sin>
+          <noise type="gaussian">
+           <mean>0.0</mean>
+           <stddev>0.2</stddev>
+          </noise>
+        </magnitude>
+        <direction>
+          <time_for_rise>10.0</time_for_rise>
+          <sin>
+            <amplitude>1.0</amplitude>
+            <period>20</period>
+          </sin>
+          <noise type="gaussian">
+           <mean>0.0</mean>
+           <stddev>0.03</stddev>
+          </noise>
+        </direction>
+      </horizontal>
+      <vertical>
+        <mean>0.0</mean>
+        <noise type="gaussian">
+         <mean>0.0</mean>
+         <stddev>0.0</stddev>
+        </noise>
+      </vertical>
+    </plugin>
+
+    <!--
+    <plugin
+      filename="/usr/local/lib/libgz-sim8-wind-publisher-system.so"
+      name="wind_publisher_plugin::WindPublisherSystem">
+      <frame_id>crazyflie/body</frame_id>
+      <base_wind_x>0.0</base_wind_x>
+      <base_wind_y>0.0</base_wind_y>
+      <base_wind_z>0.0</base_wind_z>
+      <slow_amplitude>0.1</slow_amplitude>
+      <slow_period>30.0</slow_period>
+      <fast_amplitude>0.05</fast_amplitude>
+      <fast_period>5.0</fast_period>
+      <lateral_amplitude>0.05</lateral_amplitude>
+      <lateral_period>15.0</lateral_period>
+      <vertical_amplitude>0.0</vertical_amplitude>
+      <noise_stddev>0.05</noise_stddev>
+      <aerodynamic_coefficient>0.05</aerodynamic_coefficient>
+    </plugin>
+    -->
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <include>
+      <uri>model://crazyflie</uri>
+      <name>crazyflie</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <model name="wall1">
+      <pose>2 0 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 4 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall2">
+      <pose>-2 0 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 4 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall3">
+      <pose>0 2 0.5 0 0 1.57</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 4 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall4">
+      <pose>0 -2 0.5 0 0 1.57</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 4 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
+
