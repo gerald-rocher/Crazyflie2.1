@@ -20,7 +20,7 @@ $> sudo apt install software-properties-common build-essential
 $> sudo add-apt-repository universe
 $> sudo apt update
 $> export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
-$> curl -L -o /tmp/ros2-apt-source.deb https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source ${ROS_APT_SOURCE_VERSION}.$(. /ryc/os-release && echo $VERSION_CODENAME)_all.deb
+$> curl -L -o /tmp/ros2-apt-source.deb https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb
 $> sudo dpkg -i /tmp/ros2-apt-source.deb
 $> sudo apt update
 $> sudo apt upgrade
@@ -36,11 +36,11 @@ $> source ~/.bashrc
 
 ![harmonic](resources/harmonic.png)
 
-Install via [these instructions](https://gazebosim.org/docs/harmonic/install_ubuntu/) (Note that this is not the recommended Gazebo for humble but the specific ROS bridge for is installed here after):
+Install via [these instructions](https://gazebosim.org/docs/harmonic/install_ubuntu/). Note that this is not the recommended Gazebo for humble but the specific ROS bridge for is installed here after:
 ```shell
 $> sudo apt install libboost-program-options-dev libusb-1.0-0-dev python3-colcon-common-extensions
 $> sudo apt install ros-humble-motion-capture-tracking ros-humble-tf-transformations
-$> sudo apt install ros-humble-ros-gzharmonic ros-humble-teleop-twist-keyboard
+$> sudo apt install ros-humble-ros-gzharmonic ros-humble-teleop-twist-keyboard ros-humble-xacro ros-humble-joint-state-publisher-gui
 $> pip3 install cflib transform3D 
 ```
 
@@ -52,8 +52,9 @@ $> cd ros2_ws/src
 $> git clone <this repository>
 $> cd ..
 $> colcon build
-$> source install/setup.bash
-$> export GZ_SIM_RESOURCE_PATH="~/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/"
+$> echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
+$> echo "export GZ_SIM_RESOURCE_PATH=\"~/ros2_ws/src/Crazyflie2.1/simulator_files/gazebo/\"" >> ~/.bashrc
+$> $> source ~/.bashrc
 ```
 
 ## Execution
@@ -61,6 +62,7 @@ $> export GZ_SIM_RESOURCE_PATH="~/ros2_ws/src/Crazyflie2.1/simulator_files/gazeb
 ```shell
 $> ros2 launch crazyflie_description view_crazyflie_launch.py
 ```
+And change 'Fixed Frame' to crazyflie/base_footprint 
 ![Texte alternatif](resources/crazyflie-rviz.png)
 
 
